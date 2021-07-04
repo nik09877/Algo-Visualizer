@@ -2,9 +2,12 @@
 
 [Algo-Visualizer](https://algo-visualizer-01.netlify.app/).
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+This Project contains 3 pages.\
+1.HomePage.\
+2.SearchPage\
+3.SortPage\
 
 ### `yarn start`
 
