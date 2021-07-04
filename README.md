@@ -7,7 +7,7 @@
 This Project contains 3 pages.\
 1.HomePage.\
 2.SearchPage.\
-3.SortPage.\
+3.SortPage.
 
 
 
