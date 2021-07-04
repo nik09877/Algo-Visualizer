@@ -7,13 +7,13 @@
 This Project contains 3 pages.\
 1.HomePage.\
 2.SearchPage.\
-3.SortPage.\
+3.SortPage.
 ### Components
 The 4 main components are.\
 1.Header.\
 2.ButtonsHolder Component.\
 3.ArrayBarsHolder Component.\
-4.RangeSlider Component.\
+4.RangeSlider Component.
 
 
 ### `yarn start`
