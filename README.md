@@ -6,8 +6,8 @@
 
 This Project contains 3 pages.\
 1.HomePage.\
-2.SearchPage\
-3.SortPage\
+2.SearchPage.\
+3.SortPage.\
 
 ### `yarn start`
 
