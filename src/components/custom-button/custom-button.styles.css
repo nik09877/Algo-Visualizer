@@ -24,5 +24,8 @@
   }
 }
 
-@media only screen and (max-width: 510px) {
+@media all and (max-width: 541px) {
+  .custom-button > span {
+    font-size: 10px;
+  }
 }

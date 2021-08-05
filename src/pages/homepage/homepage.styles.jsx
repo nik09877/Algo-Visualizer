@@ -37,12 +37,27 @@ export const Box = styled.div`
     -moz-box-shadow: -3px 3px 5px 6px rgba(0, 0, 0, 0.4); /* Firefox 3.5 - 3.6 */
     box-shadow: -3px 3px 5px 6px rgba(0, 0, 0, 0.4); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
+  h3 {
+    font-size: 1.1rem;
+  }
+  @media only screen and (max-width: 541px) {
+    h3 {
+      font-size: 1rem;
+    }
+    height: 17.8rem;
+  }
+  @media only screen and (max-width: 376px) {
+    h3 {
+      font-size: 0.9rem;
+    }
+    height: 10rem;
+  }
 `;
 
 export const Paragraph = styled.p`
   font-family: sans-serif;
   font-size: 1.1rem;
-  @media only screen and (max-width: 510px) {
+  @media only screen and (max-width: 541px) {
     font-size: small;
   }
 
