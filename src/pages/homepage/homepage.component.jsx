@@ -18,11 +18,7 @@ const HomePage = () => (
     <Container>
       <Box>
         <div>
-          <h3 style={{ fontFamily: "Georgia" }}>
-            <br />
-            Search Visualizer
-          </h3>
-          <br />
+          <h3 style={{ fontFamily: "Georgia" }}>Search Visualizer</h3>
         </div>
         <div>
           <Paragraph>
@@ -32,19 +28,13 @@ const HomePage = () => (
         </div>
         <div>
           <Link to="/search">
-            <CustomButton style={{ borderRadius: "0" }}>
-              Search Algorithms
-            </CustomButton>
+            <CustomButton>Search Algorithms</CustomButton>
           </Link>
         </div>
       </Box>
       <Box>
         <div>
-          <h3 style={{ fontFamily: "Georgia" }}>
-            <br />
-            Sorting Visualizer
-          </h3>
-          <br />
+          <h3 style={{ fontFamily: "Georgia" }}>Sorting Visualizer</h3>
         </div>
         <div>
           <Paragraph>
@@ -54,9 +44,7 @@ const HomePage = () => (
         </div>
         <div>
           <Link to="/sort">
-            <CustomButton style={{ borderRadius: "0" }}>
-              Sorting Algorithms
-            </CustomButton>
+            <CustomButton>Sorting Algorithms</CustomButton>
           </Link>
         </div>
       </Box>

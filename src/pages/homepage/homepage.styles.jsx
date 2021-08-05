@@ -30,6 +30,7 @@ export const Box = styled.div`
   border-radius: 5px;
   background-color: #f8ceec;
   background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+  transition: all 1s;
 
   &:hover {
     cursor: pointer;
@@ -38,7 +39,8 @@ export const Box = styled.div`
     box-shadow: -3px 3px 5px 6px rgba(0, 0, 0, 0.4); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
   }
   @media only screen and (max-width: 541px) {
     h3 {
