@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const HeaderComponent = styled.div`
-  height: 8%;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;

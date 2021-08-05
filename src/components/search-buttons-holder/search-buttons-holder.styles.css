@@ -3,9 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  /* overflow-y: auto; */
 }
 
-button {
+button,
+.input-field {
   height: 70%;
   margin-left: 2%;
   margin-right: 2%;
@@ -18,20 +21,45 @@ button {
   transition: 0.3s;
 }
 
+.input-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+input {
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 969px) {
+  input {
+    width: 5rem;
+  }
+}
+@media only screen and (max-width: 897px) {
+  .input-field {
+    height: 1.4rem;
+  }
+}
 @media only screen and (max-width: 510px) {
   button {
+    height: 1.7rem;
     font-size: small;
   }
 }
 
 @media only screen and (max-width: 410px) {
-  button {
+  button,
+  .input-field {
     font-size: x-small;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  button {
+  button,
+  .input-field {
     font-size: xx-small;
   }
 }

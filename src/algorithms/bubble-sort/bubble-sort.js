@@ -7,14 +7,9 @@ import {
   changeBoxShadow,
   swapBars,
   resetBarStyleDefault,
-  disableButtons,
-  enableButtons,
 } from "./../../helper-functions";
 
 const BubbleSort = (array, animationSpeed) => {
-  // Disabling the buttons so that the animation cannot be interrupted.
-  disableButtons();
-
   // Getting the animations which has been generated in the "getBubbleSortAnimations" function.
   const animations = getBubbleSortAnimations(array);
 
@@ -26,7 +21,7 @@ const BubbleSort = (array, animationSpeed) => {
     const finalElement = animations[i + 4];
 
     // Here, promise has been used to know when to Enable Buttons again after the setTimeout ends.
-    const promise1 = new Promise(function (resolve, reject) {
+    const promise1 = new Promise(function (resolve, _) {
       setTimeout(() => {
         // Changing the color-bar of comparing elements.
         changeBackgroundColor(comparingElement1, "rgba(255,165,0, 0.9)");
@@ -45,8 +40,7 @@ const BubbleSort = (array, animationSpeed) => {
       resolve();
     });
 
-    // Here, promise has been used to know when to Enable Buttons again after the setTimeout ends.
-    const promise2 = new Promise(function (resolve, reject) {
+    const promise2 = new Promise(function (resolve, _) {
       setTimeout(() => {
         if (isFinalElement === true) {
           // Changing the color-bar of finalElement index which has taken its final sorted position.
@@ -66,9 +60,7 @@ const BubbleSort = (array, animationSpeed) => {
       }, (i + 5) * animationSpeed);
     });
 
-    Promise.all([promise1, promise2])
-      // Enabling the buttons when both the promises have been resolved.
-      .then(enableButtons);
+    Promise.all([promise1, promise2]);
   }
 
   // Resetting the color-bar style to default after the animations end.

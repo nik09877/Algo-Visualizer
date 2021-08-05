@@ -4,8 +4,6 @@ import {
   changeBoxShadow,
   swapBars,
   resetBarStyleDefault,
-  disableButtons,
-  enableButtons,
 } from "./../../helper-functions";
 
 // color of currentElement -> black
@@ -14,9 +12,6 @@ import {
 // color of finalElement -> green
 
 const SelectionSort = (array, animationSpeed) => {
-  // disable all the buttons
-  disableButtons();
-
   //get animations
   const animations = getSelectionSortAnimations(array);
 
@@ -28,7 +23,6 @@ const SelectionSort = (array, animationSpeed) => {
     const isFinalElement = animations[i + 4];
     const finalElement = animations[i + 5];
 
-    // use promise to know when to enable buttons
     const promise1 = new Promise((resolve) => {
       setTimeout(() => {
         // Change the color-bar of current elements.
@@ -68,8 +62,7 @@ const SelectionSort = (array, animationSpeed) => {
       }, (i + 6) * animationSpeed);
     });
 
-    // enable buttons after the promises are resolved
-    Promise.all([promise1, promise2]).then(enableButtons);
+    Promise.all([promise1, promise2]);
   }
   // Reset the color-bar style to default after the animations end.
   resetBarStyleDefault(array, (animations.length + 6) * animationSpeed);

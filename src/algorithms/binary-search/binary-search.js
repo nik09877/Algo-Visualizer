@@ -3,8 +3,6 @@ import {
   changeBackgroundColor,
   changeBoxShadow,
   resetBarStyleDefault,
-  disableSearchButtons,
-  enableSearchButtons,
 } from "./../../helper-functions";
 
 const COMPAIRING_COLOR = "rgba(255,165,0, 0.9)";
@@ -14,20 +12,15 @@ const BOUNDARY_COLOR = "blue";
 const TARGET_COLOR = "rgba(0, 164, 86, 0.6)";
 const TARGET_SHADOW = "5px 5px 50px 5px rgba(0, 164, 86, 0.2)";
 
-export const BinarySearch = (array, animationSpeed, target) => {
-  // disable buttons before performing binary search
-  disableSearchButtons();
+export const BinarySearch = async (array, animationSpeed, target) => {
+  const idx = await binarySearchHelper(array, animationSpeed, target);
+  //after searching is done
+  resetBarStyleDefault(array, animationSpeed);
 
-  binarySearchHelper(array, animationSpeed, target).then((idx) => {
-    //after searching is done
-    resetBarStyleDefault(array, animationSpeed);
-
-    enableSearchButtons();
-
-    idx !== -1
-      ? alert(`${target} found at index ${idx + 1}!`)
-      : alert(`${target} not found!`);
-  });
+  //TODO Display popup
+  idx !== -1
+    ? alert(`${target} found at index ${idx + 1}!`)
+    : alert(`${target} not found!`);
 };
 
 async function binarySearchHelper(array, animationSpeed, target) {

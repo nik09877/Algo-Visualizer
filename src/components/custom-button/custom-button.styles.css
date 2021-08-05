@@ -1,21 +1,28 @@
 .custom-button {
-  min-width: 165px;
   width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  /* line-height: 50px; */
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed";
-  font-weight: bolder;
+  height: 3.125rem;
+  padding: 0.35em 1.2em;
   border: none;
-  cursor: pointer;
+  margin: 10px 0.3em 0.3em 10px;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
 }
 .custom-button:hover {
-  background-color: white;
-  color: black;
+  color: #000000;
+  background-color: #ffffff;
   border: 1px solid black;
+}
+
+@media all and (max-width: 30em) {
+   .custom-button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+@media only screen and (max-width: 510px) {
 }

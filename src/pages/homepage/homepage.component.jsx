@@ -20,7 +20,7 @@ const HomePage = () => (
         <div>
           <h3 style={{ fontFamily: "Georgia" }}>
             <br />
-            Searching Visualizer
+            Search Visualizer
           </h3>
           <br />
         </div>
@@ -33,7 +33,7 @@ const HomePage = () => (
         <div>
           <Link to="/search">
             <CustomButton style={{ borderRadius: "0" }}>
-              Searching Algorithms
+              Search Algorithms
             </CustomButton>
           </Link>
         </div>

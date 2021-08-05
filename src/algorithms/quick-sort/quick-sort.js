@@ -4,8 +4,6 @@ import {
   changeBoxShadow,
   swapBars,
   resetBarStyleDefault,
-  disableButtons,
-  enableButtons,
   swap,
 } from "./../../helper-functions";
 
@@ -14,23 +12,19 @@ const SWAPPING_COLOR = "rgba(144,238,144, 0.9)";
 const SORTED_COLOR = "rgba(0, 164, 86, 0.6)";
 const SORTED_SHADOW = "5px 5px 50px 5px rgba(0, 164, 86, 0.2)";
 
-const QuickSort = (array, animationSpeed) => {
-  disableButtons();
-
-  quickSortHelper(array, 0, array.length - 1, animationSpeed).then(() => {
-    resetBarStyleDefault(array, animationSpeed);
-    enableButtons();
-  });
+const QuickSort = async (array, animationSpeed) => {
+  await quickSortHelper(array, 0, array.length - 1, animationSpeed);
+  resetBarStyleDefault(array, animationSpeed);
 };
 
-async function quickSortHelper(array, left, right, animationSpeed) {
+const quickSortHelper = async (array, left, right, animationSpeed) => {
   // left-pointer would be the index of the first element which is 0 and right-pointer would be the index of the last element which would be (length -1).
   if (left < right) {
     let pivot = await partition(array, left, right, animationSpeed);
     await quickSortHelper(array, left, pivot - 1, animationSpeed);
     await quickSortHelper(array, pivot + 1, right, animationSpeed);
   }
-}
+};
 
 async function partition(array, left, right, animationSpeed) {
   let pivot = array[right]; // pivot
