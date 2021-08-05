@@ -1,6 +1,6 @@
 # Check Out The App Here
 
-[Algo-Visualizer](https://algo-visualizer-01.netlify.app/).
+[Algo-Visualizer](https://algo-visualizer-1-0-0.netlify.app/).
 
 ## Project Description
 ### Pages
