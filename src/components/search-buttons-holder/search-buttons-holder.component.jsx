@@ -42,7 +42,7 @@ const BtnHolder = (props) => {
       <div class="input-field">
         <input
           type="text"
-          placeholder="Enter Target "
+          placeholder="Enter Target"
           onChange={props.handleTargetChange}
         />
       </div>
