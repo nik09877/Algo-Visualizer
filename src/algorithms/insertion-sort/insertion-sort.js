@@ -7,14 +7,9 @@ import {
   changeBoxShadow,
   swapBars,
   resetBarStyleDefault,
-  disableButtons,
-  enableButtons,
 } from "./../../helper-functions";
 
 const InsertionSort = (array, animationSpeed) => {
-  //disable the buttons so that they don't interfere while running the algorithm
-  disableButtons();
-
   //get the animations
   const animations = getInsertionSortAnimation(array);
 
@@ -24,7 +19,6 @@ const InsertionSort = (array, animationSpeed) => {
     const swap = animations[i + 2];
     const sortedTill = animations[i + 3];
 
-    // use promises to know when to enable buttons
     const promise1 = new Promise((resolve) => {
       setTimeout(() => {
         changeBackgroundColor(firstElement, "rgba(255,165,0, 0.9)");
@@ -54,8 +48,7 @@ const InsertionSort = (array, animationSpeed) => {
       }, (i + 4) * animationSpeed);
     });
 
-    // Enabling the buttons when both the promises have been resolved.
-    Promise.all([promise1, promise2]).then(enableButtons);
+    Promise.all([promise1, promise2]);
   }
 
   // Resetting the color-bar style to default after the animations end.

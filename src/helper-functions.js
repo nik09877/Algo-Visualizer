@@ -78,7 +78,8 @@ export function swap(array, i, j) {
 export function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
+/*
+Will Add this Feature in the Future
 // ## Enables all the buttons ## //
 export function enableButtons() {
   document.getElementById("reset").disabled = false;
@@ -125,3 +126,4 @@ export function disableSearchButtons() {
   document.getElementById("range-slider").style.opacity = 0;
   document.getElementById("range-slider").style.visibility = "hidden";
 }
+*/

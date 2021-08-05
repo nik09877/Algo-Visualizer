@@ -3,31 +3,23 @@ import {
   changeBackgroundColor,
   changeBoxShadow,
   resetBarStyleDefault,
-  disableSearchButtons,
-  enableSearchButtons,
 } from "./../../helper-functions";
 
 const COMPAIRING_COLOR = "rgba(255,165,0, 0.9)";
 const TARGET_COLOR = "rgba(0, 164, 86, 0.6)";
 const TARGET_SHADOW = "5px 5px 50px 5px rgba(0, 164, 86, 0.2)";
 
-export const LinearSearch = (array, animationSpeed, target) => {
-  // disable buttons before performing linear search
-  disableSearchButtons();
-
-  linearSearchHelper(array, animationSpeed, target).then((idx) => {
-    //after searching is done
-    resetBarStyleDefault(array, animationSpeed);
-
-    enableSearchButtons();
-
-    idx !== -1
-      ? alert(`${target} found at index ${idx + 1}!`)
-      : alert(`${target} not found!`);
-  });
+export const LinearSearch = async (array, animationSpeed, target) => {
+  const idx = await linearSearchHelper(array, animationSpeed, target);
+  //after searching is done
+  resetBarStyleDefault(array, animationSpeed);
+  //TODO Display popup
+  idx !== -1
+    ? alert(`${target} found at index ${idx + 1}!`)
+    : alert(`${target} not found!`);
 };
 
-async function linearSearchHelper(array, animationSpeed, target) {
+const linearSearchHelper = async (array, animationSpeed, target) => {
   for (let i = 0; i < array.length; i++) {
     const currentElement = array[i];
 
@@ -51,4 +43,4 @@ async function linearSearchHelper(array, animationSpeed, target) {
     }
   }
   return -1;
-}
+};
