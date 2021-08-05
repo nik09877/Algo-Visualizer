@@ -3,13 +3,13 @@
 import React from "react";
 import "./search-buttons-holder.styles.css";
 
-import { TextField, withStyles } from "@material-ui/core";
+// import { TextField, withStyles } from "@material-ui/core";
 
-const StyledTextField = withStyles({
-  root: {
-    marginBottom: "1.2%",
-  },
-})(TextField);
+// const StyledTextField = withStyles({
+//   root: {
+//     marginBottom: "1.2%",
+//   },
+// })(TextField);
 
 const BtnHolder = (props) => {
   return (
@@ -39,7 +39,14 @@ const BtnHolder = (props) => {
       >
         Sort The Array!
       </button>
-      <StyledTextField
+      <div class="input-field">
+        <input
+          type="text"
+          placeholder="Enter Target "
+          onChange={props.handleTargetChange}
+        />
+      </div>
+      {/*<StyledTextField
         id="inputField"
         label="Enter a target value"
         size="medium"
@@ -47,7 +54,8 @@ const BtnHolder = (props) => {
         onChange={props.handleTargetChange}
         // defaultValue={props.target}
         // required={true}
-      />
+        className="input-field"
+      />*/}
     </div>
   );
 };

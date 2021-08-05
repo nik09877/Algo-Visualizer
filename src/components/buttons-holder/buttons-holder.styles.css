@@ -20,6 +20,7 @@ button {
 
 @media only screen and (max-width: 510px) {
   button {
+    height: 1.7rem;
     font-size: small;
   }
 }
@@ -27,12 +28,14 @@ button {
 @media only screen and (max-width: 410px) {
   button {
     font-size: x-small;
+    height: 1.7rem;
   }
 }
 
 @media only screen and (max-width: 320px) {
   button {
     font-size: xx-small;
+    height: 1.7rem;
   }
 }
 
