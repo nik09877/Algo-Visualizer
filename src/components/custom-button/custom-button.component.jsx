@@ -4,7 +4,7 @@ import "./custom-button.styles.css";
 
 const CustomButton = ({ children, ...otherProps }) => (
   <button className="custom-button" {...otherProps}>
-    {children}
+    <span>{children}</span>
   </button>
 );
 

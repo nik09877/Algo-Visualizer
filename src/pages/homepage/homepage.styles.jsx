@@ -5,11 +5,14 @@ export const HomePageComponent = styled.div`
   height: 100vh;
   background-color: #7f53ac;
   background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+  box-sizing: border-box;
 `;
 
 export const Container = styled.div`
   height: 92vh;
   display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
   align-items: center;
   justify-content: space-around;
 `;
