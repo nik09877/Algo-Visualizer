@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 export const HomePageComponent = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
   background-color: #7f53ac;
   background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
 `;
 
 export const Container = styled.div`
-  height: 94.2vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 `;
 
 export const Box = styled.div`
-  background-color: #fafafa;
   padding: 120px;
   margin: 20px;
   height: 55%;
